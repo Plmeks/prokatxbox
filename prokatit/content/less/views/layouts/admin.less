@@ -1,0 +1,49 @@
+#admin {
+  min-width: 1100px;
+
+  .side-menu {
+    margin-top: 20px;
+    a {
+      color: @color-grey-dark;
+      &:hover {
+        color: black;
+      }
+    }
+  }
+
+  #adminTree {
+    .list-group {
+      margin-bottom: 0;
+      .node-selected {
+        background-color: @color-blue !important;
+        color: white;
+      }
+      li {
+        border-radius: 0;
+      }
+    }
+  }
+
+  .gridWrapper {
+    background-color: white;
+  }
+
+  .empty-wrapper {
+    .lg({ margin: 0; });
+    .md({ margin: 0; });
+  }
+
+  .showTitle {
+    margin-bottom: 20px;
+    .callout-bubble {
+      padding: 40px;
+      color: white;
+      background-color: @color-blue;
+      h1, h2, h3, h4 {
+        font-weight: 300;
+        line-height: 1.4;
+      }
+    }
+  }
+
+}

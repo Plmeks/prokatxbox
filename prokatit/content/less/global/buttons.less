@@ -1,0 +1,93 @@
+.btn-success {
+  outline: none !important;
+  background-color: @color-blue;
+  border-color: @color-blue;
+
+  &:hover {
+    background-color: darken(@color-blue, 5%);
+    border-color: @color-blue;
+  }
+
+  &:focus {
+    border-color: @color-blue;
+    background-color: @color-blue;
+  }
+
+  &:active:focus {
+    border-color: @color-blue;
+    background-color: @color-blue;
+  }
+}
+
+.btn-primary {
+    outline: none !important;
+    background-color: @color-green;
+    border-color: @color-green;
+
+    &:hover {
+        background-color: darken(@color-green, 5%);
+        border-color: @color-green;
+    }
+
+    &:focus {
+        border-color: @color-green;
+        background-color: @color-green;
+    }
+
+    &:active:focus {
+        border-color: @color-green;
+        background-color: @color-green;
+    }
+}
+
+
+.modalButton.disabled {
+    background-color: saturate(@color-blue, 15%);
+    border-color: @color-blue;
+    &:hover {
+        background-color: saturate(@color-blue, 15%);
+        border-color: @color-blue;
+    }
+}
+.fast-order-btn {
+  background-color: @color-red !important;
+  &:active {
+    background-color: @color-red !important;
+  }
+
+  &:hover {
+    color: white;
+    background-color: lighten(@color-red, 5%) !important;
+    transition: all.3s;
+  }
+}
+.action-button {
+  .buttonObject(280px, 11px, 70px, 6px, 20px, 2px);
+
+  color: white;
+  border: 0;
+  outline: none !important;
+//  border: 1px solid @color-grey;
+  background-color: @color-blue;
+  border-radius: 0;
+  font-weight: bold;
+  transition: all .3s;
+
+  &:active {
+    background-color: @color-blue;
+  }
+
+  &:hover {
+    color: white;
+    background-color: lighten(@color-blue, 5%);
+    transition: all.3s;
+  }
+
+  .sm({
+    margin-top: 20px;
+  });
+  .xs({
+    margin-top: 10px;
+  });
+}
+

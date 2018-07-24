@@ -1,0 +1,176 @@
+//@color-red: #e44739;
+//@color-black: #333;
+//@color-white: #f2f3f4;
+//@color-blue: #257F8C;
+
+@h1-size-ratio: 6px;
+@h1-size: 43px;
+
+@h2-size-ratio: 4px;
+@h2-size: 30px;
+
+@h3-size-ratio: 2px;
+@h3-size: 20px;
+
+@h4-size-ratio: 1px;
+@h4-size: 18px;
+
+@h5-size-ratio: 2px;
+@h5-size: 15px;
+
+@p-size-ratio: 0px;
+@p-size: 14px;
+
+@ul-size-ratio: 1.2px;
+@ul-size: 14px;
+
+@square-image-large-ratio: 25px;
+@square-image-large-size: 150px;
+
+@square-image-middle-ratio: 10px;
+@square-image-middle-size: 100px;
+
+@square-image-small-ratio: 8px;
+@square-image-small-size: 80px;
+
+section, header, footer {
+    /* Важно ! Нужно, чтобы самый родительский блок каждого элемента, имел автоматическую ширину и высоту*/
+    display: block;
+    overflow: auto;
+}
+
+html, body {
+//    width: 100%;
+    /*margin: 0;
+    padding: 0;*/
+}
+
+//body {
+//    min-height: 100%;
+//}
+
+/* Бутcтрап - дурак. Внутри contriner, row высота блока сбрасывается и остается высота контента.
+  Используем там, где необходим высота на весь экран (landing).
+*/
+
+.full-height {
+    /* Чтобы дочерние элементы, которым нужно, могли задавать высоту на весь экран (full, slider) */
+    height: 100%;
+}
+
+body {
+    //  .pt-sans-font();
+    //  background-color: @body-color;
+    //  color: @body-text-color;
+
+    textarea {
+        resize: none;
+    }
+
+    .row-eq-height {
+        // Чтобы колонки с разным контентом, имели одинаковую высоту. Т.е. осуществляется вертикальное
+        // центрирование контента
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: row;
+    }
+
+    //Работает только с выравниванием row-eq-height
+    .vertical-col[class^="col-"],
+    .vertical-col[class*="col-"],
+    .vertical-col > [class^="col-"],
+    .vertical-col > [class*=" col-"] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Optional, to align inner items
+                                     horizontally inside the column */
+    }
+
+    // Another way. Place this class on row.
+    .verticalCenter {
+        display: flex;
+        align-items: center;
+    }
+
+    // То же самое, что и выше, только легче. Ставим к любой column, которую хотим
+    // центирровать по вертикали. Важно! Добавляем между блоками <!-- -->, чтобы
+    // убить баг со странным сдвигом.
+    .verticalAlign {
+        display: inline-block;
+        float: none;
+
+        &.center {
+            vertical-align: middle;
+        }
+
+        &.top {
+            vertical-align: top;
+        }
+
+        &.bottom {
+            vertical-align: bottom;
+        }
+
+    }
+
+    h1 {
+        .size(font-size, @h1-size, @h1-size-ratio);
+//        .xs({ font-size: @h1-size !important; });
+    }
+
+    h2 {
+        .size(font-size, @h2-size, @h2-size-ratio);
+//        .xs({ font-size: @h2-size !important; });
+    }
+
+    h3 {
+        .size(font-size, @h3-size, @h3-size-ratio);
+//        .xs({ font-size: @h3-size !important; });
+    }
+
+    h4 {
+        .size(font-size, @h4-size, @h4-size-ratio);
+//        .xs({ font-size: @h4-size !important; });
+    }
+
+    h5 {
+        .size(font-size, @h5-size, @h5-size-ratio);
+//        .xs({ font-size: @h5-size !important; });
+    }
+
+    p {
+        .size(font-size, @p-size, @p-size-ratio);
+//        .xs({ font-size: @p-size !important; });
+    }
+
+    ul, ol {
+        .size(font-size, @ul-size, @ul-size-ratio);
+        .xs({ font-size: calc(@ul-size - @ul-size-ratio) !important; });
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .square-image-large {
+        .size(width, @square-image-large-size, @square-image-large-ratio);
+    }
+
+    .square-image-middle {
+        .size(width, @square-image-middle-size, @square-image-middle-ratio);
+    }
+
+    .square-image-small {
+        .size(width, @square-image-small-size, @square-image-small-ratio);
+    }
+
+    .full-width-image {
+        width: 100%;
+    }
+}
+
+
+

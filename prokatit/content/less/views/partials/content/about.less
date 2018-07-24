@@ -1,0 +1,54 @@
+#prokatit-about {
+  .image-holder {
+    .objectHeight(400px, 10px);
+    padding: 30px;
+    padding-top: 0;
+  }
+
+  img {
+    object-fit: cover;  // картинка  масштабируется
+//    position: relative;
+    height: 100%;
+    width: 100%;
+//    z-index: -1;
+  }
+
+
+
+  .image-div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &:hover {
+      .gradient {
+        background-color: rgba(228, 71, 57, 0.43);
+      }
+    }
+    .gradient {
+      transition: all 0.5s ease;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(37, 127, 140, 0.43);
+      top: 0;
+    }
+
+    .under {
+      color: white;
+      position: absolute;
+      top: 35%;
+    //    left: 50%;
+      transform: translate(0, -50%);
+      width: 100%;
+    }
+  }
+
+  .section-heading {
+    background-color: #E44739;
+    color: white;
+    h2 {
+      margin: 30px;
+    }
+  }
+
+}

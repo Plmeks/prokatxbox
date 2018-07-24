@@ -1,0 +1,35 @@
+.start-navbar {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  .navbar-collapse {
+    border: none !important;
+    .navbarMenu  {
+      text-align: center;
+      .xs({
+        border-width: 0 !important;
+        margin-left: 5px;
+        margin-right: 5px;
+        background-color: @color-red;
+      });
+      a {
+        background: none !important;
+        &:hover {
+          color: @color-red !important;
+        }
+        .xs({
+        &:hover {
+          color: white !important;
+          font-weight: bold;
+        }
+        });
+
+      }
+    }
+  }
+}

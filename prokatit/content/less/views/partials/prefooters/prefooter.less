@@ -1,0 +1,98 @@
+#prokatit-prefooter {
+  background-color: lighten(@footer-color, 5%);
+  color: white;
+  .size(padding-top, 20px, 4px);
+  .size(padding-bottom, 20px, 4px);
+
+  #send {
+    .form-control {
+      border-radius: 0px;
+      box-shadow: none;
+    }
+
+    button {
+      color: white;
+      border: 0;
+      background-color: @color-red;
+      border-radius: 0;
+      font-weight: bold;
+      transition: all .3s;
+
+      &:hover {
+        background-color: lighten(@color-red, 10%);
+        transition: all.3s;
+      }
+
+      width: 100%;
+      .size(height, 42px, 2px);
+    }
+
+    /*.success {
+      margin-top: 50px;
+    }*/
+  }
+
+  /*#vk-groups  {
+    width: 100% !important;
+    height: 100% !important;
+  }*/
+  .contact-block {
+    .item {
+      .size(margin-top, 30px, 8px);
+      .xs({
+        text-align: center;
+      });
+
+      p {
+        .size(font-size, 16px, 0.5px);
+        .xs({
+          font-size: 15px !important;
+        });
+      }
+
+      h5 {
+        margin-top: 0;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        .size(font-size, 16px, 0.5px);
+        .xs({
+          font-size: 14px !important;
+        });
+      }
+    }
+
+    .icon {
+      text-align: right;
+      .xs({
+        text-align: center;
+        margin-bottom: 5px;
+      });
+
+      .glyphicon {
+        .size(font-size, 35px, 4px);
+        .xs({
+          font-size: 30px !important;
+        });
+        color: @color-red;
+      }
+    }
+  }
+
+  .contact-block:first-child {
+    .item:first-child {
+      margin-top: 0px !important;
+    }
+
+    .xs({
+      margin-top: 20px !important;
+    });
+  }
+
+  .contact-block:last-child {
+    .xs({
+      margin-bottom: 20px;
+    });
+  }
+
+}

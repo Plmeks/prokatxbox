@@ -1,0 +1,101 @@
+@navbar-logo-img-ratio: 6px;
+@navbar-logo-img-margin: 6px;
+@navbar-logo-img-size: 80px;
+
+@navbar-menu-font-ratio: 0.7px;
+@navbar-menu-font-size: 16px;
+
+@navbar-mobile-button-width: 65px;
+@navbar-mobile-button-margin-top: ((@navbar-logo-img-size - @navbar-logo-img-ratio * 3)  +  (@navbar-logo-img-margin * 2) - 32px) / 2; /* 32px - mobile button size, block means - center mobile button */
+
+#loginNav {
+  .size(margin-top, @navbar-logo-img-size / 2 + @navbar-logo-img-margin - @ul-size, @navbar-logo-img-ratio);
+}
+
+.body-padding  {
+  padding-top: @navbar-logo-img-size + @navbar-logo-img-margin * 2;
+}
+
+.start-navbar {
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  .navbar-collapse {
+    border: none !important;
+    ul {
+      text-align: center;
+      .xs({
+        border-width: 0 !important;
+        margin-left: 5px;
+        margin-right: 5px;
+        background-color: #f04a3b;
+      });
+      a {
+        &:hover {
+          color: #f04a3b !important;
+        }
+        .xs({
+        &:hover {
+          color: white !important;
+          font-weight: bold;
+        }
+        });
+
+      }
+    }
+  }
+
+}
+
+.navbar-static {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+}
+
+nav.navbar {
+  min-width: 300px !important;
+  border: none !important;
+  margin: 0;
+  .box-shadow(0px 5px 11px 0px rgba(50, 50, 50, 0.08)); /*Navbar shadow*/
+  background-color: #333;
+  .navbar-header { /* Left block, where logo image and button mobile. */
+    #mobile-button {
+      margin-top: @navbar-mobile-button-margin-top;
+      width: @navbar-mobile-button-width;
+      border: 0;
+      background-color: transparent;
+
+      span {
+        background-color: white;
+      }
+    }
+    #navbar-logo-img {
+      margin: @navbar-logo-img-margin 0 @navbar-logo-img-margin 0;
+      .size(height, @navbar-logo-img-size, @navbar-logo-img-ratio);
+      .xs({
+        padding-left: 20px;
+      });
+    }
+  }
+
+  #navbar { /* Menu here */
+    ul{
+      li{
+        a {
+          padding-top: 0;
+          padding-bottom: 0;
+          color: white;
+          //					.text-shadow(1px 1px 1px #fff);
+          &:hover {
+            color: @color-red;
+          }
+
+          .size(font-size, @navbar-menu-font-size, @navbar-menu-font-ratio);
+          .size(line-height, @navbar-logo-img-size + @navbar-logo-img-margin * 2, @navbar-logo-img-ratio);
+        }
+      }
+    }
+  }
+}

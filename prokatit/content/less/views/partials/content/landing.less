@@ -1,0 +1,226 @@
+@slider-gradient-old: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+@slider-gradient: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+
+@corner-size : 150px;
+@corner-size-xs : 120px;
+@corner-color: #F6740A;
+
+#prokatit-landing {
+	// padding-top: 5px;
+  .size(margin-top, 20px, 5px);
+    .xs({
+        margin-top: 5px !important;
+    });
+  .slider-wrap {
+    position: relative;
+
+    .sm({
+      padding-right: 0px;
+    });
+    .xs({
+      padding-right: 0px;
+    });
+
+    padding-right: 5px;
+    
+    #cornerWrap {
+    	&:hover {
+    		#corner {
+    			border-top: @corner-size solid @color-orange-dark;
+				border-right: @corner-size solid transparent;
+    		}
+		}
+		
+		.xs({
+			&:hover {
+	    		#corner {
+	    			border-top: @corner-size-xs solid @color-orange-dark;
+					border-right: @corner-size-xs solid transparent;
+	    		}
+			}
+		});
+		
+    	#corner {
+	    	z-index: 3;
+	    	position: absolute;
+	    	
+	      	width: 0;
+			height: 0;
+			border-top: @corner-size solid @corner-color;
+			border-right: @corner-size solid transparent;	
+			transition: all 0.3s;
+			
+			.xs({
+				border-top: @corner-size-xs solid @corner-color;
+				border-right: @corner-size-xs solid transparent;
+			});
+	  	}
+    	
+    	#cornerText {
+	  		z-index: 4;
+	    	position: absolute;
+	    	top: 39px;
+	    	left: 5px;
+	    	.rotation(315deg);
+	    	
+	    	.xs({
+	    		top: 32px;
+	    		left: 0px;
+	    	});
+	    	
+	    	h3 {
+	    		.size(font-size, @h3-size, 0px);
+	    		text-align: center;
+	    		color: white;
+	    		margin: 0px !important;
+	    		.xs({
+		    		font-size: @h3-size - @h3-size-ratio !important;
+		    	});
+	    	}
+	  	}
+    	
+    }
+
+    #slider {
+      position: relative;
+      
+      img {
+        object-fit: cover;  // картинка  масштабируется
+        position: relative;
+        height: 620px;
+        width: 100%;
+        z-index: -1;  // для градиента
+      }
+
+      .item {
+        background: @slider-gradient;
+        position: relative;
+      }
+
+      .slider-text {
+        position: absolute;
+        color: white;
+        top: 35%;
+        transform: translate(0, -35%);
+        width: 100%;
+        z-index: 1;
+        text-align: center;
+        h1 {
+          padding: 0 10px;
+          font-weight: bold;
+        }
+        h2 {
+          .size(font-size, 25px, 2px);
+          .xs({
+            font-size: 20px;
+            line-height: 21px;
+          });
+          padding: 15px 30px;
+          .xs({
+            padding: 15px 10px;
+          });
+        }
+      }
+    }
+
+    .owl-controls {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      z-index: 100;
+      .owl-dots {
+
+
+      }
+      .owl-dot  {
+        span {
+          background: darken(@color-blue, 20%);
+          &:hover {
+            background:  @color-blue;
+          }
+        }
+      }
+
+      .owl-dot.active {
+        span {
+          background: @color-blue;
+        }
+      }
+    }
+  }
+
+  .slider-buttons {
+    text-align: center;
+    position: absolute;
+    top: 85%;
+    transform: translate(0, -85%);
+    width: 100%;
+    z-index: 1;
+
+    .fast-order-btn {
+      .size(margin-right, 30px, 5px);
+
+      .xs({
+        margin-right: 0px !important;
+      });
+    }
+  }
+
+  .popular-categories {
+  	a {
+  		color: white;
+  	}
+    color: white;
+    text-align: center;
+
+    .row {
+      cursor: pointer;
+      transition: all.5s;
+      margin-top: 5px;
+      position: relative;
+      background: @slider-gradient;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      &:first-child {
+        margin-top: 0px;
+
+        .sm({
+          margin-top: 5px;
+        });
+
+        .xs({
+          margin-top: 5px;
+        });
+      }
+
+      .categories-text {
+        position: absolute;
+        top: 35%;
+        transform:translate(0, -35%);
+        width: 100%;
+
+        h2 {
+          .size(font-size, 26px, 5px);
+          .sm({
+            font-size: 30px !important;
+          });
+          .xs({
+            font-size: 25px !important;
+          });
+        }
+      }
+    }
+
+    img {
+      object-fit: cover;  // картинка  масштабируется
+      position: relative;
+      height: 120px;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+}

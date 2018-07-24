@@ -1,0 +1,42 @@
+#prokatit-info {
+  img {
+    margin-right: 18px;
+    .size(height, 110px, 7px);
+    .size(width, 110px, 7px);
+    border-radius: 1000px;
+    float: left;
+    object-fit: cover;  // картинка  масштабируется
+    border: 2px solid @color-grey;
+    transition: all.3s;
+    &:hover {
+      transition: all.3s;
+      border-color: @color-blue;
+    }
+  }
+
+  .divider {
+    .size(margin-bottom, 20px, 5px);
+    .xs({margin-bottom: 0px;});
+  }
+
+  .item {
+    .xs({
+      margin-bottom: 10px;
+    });
+  }
+
+  h5{
+    .size(font-size, 16px, 0.4px);
+    line-height: 19px;
+    font-weight: bold;
+    color: @color-black;
+    margin-top: 5px;
+//    text-align: justify;
+  }
+
+  p {
+    .size(font-size, 14px, 0.5px);
+    color: @color-grey-dark;
+    text-align: justify;
+  }
+}

@@ -1,0 +1,131 @@
+#prokatit-email {
+
+    #send {
+        h2 {
+            margin-bottom: 20px;
+            .sm({
+                text-align: center;
+                font-weight: bold;
+                margin-bottom: 15px;
+            });
+
+            .xs({
+                text-align: center;
+                font-weight: bold;
+                margin-bottom: 12px;
+            });
+        }
+
+        .form-control {
+            border-radius: 0px;
+            box-shadow: none;
+        }
+
+        button {
+            color: white;
+            border: 0;
+            background-color: @color-blue;
+            border-radius: 0;
+            font-weight: bold;
+            transition: all .3s;
+
+            &:hover {
+                background-color: lighten(@color-blue, 5%);
+                transition: all.3s;
+            }
+
+            width: 100%;
+            .size(height, 42px, 2px);
+        }
+    }
+
+    h3  {
+        .size(margin-top, 20px, 4px);
+        .sm({
+            font-size: 18px !important;
+        });
+        .xs({
+            font-size: 18px !important;
+        });
+    }
+
+    .contactWrap {
+        border-right: 1px solid @color-grey;
+
+        .sm({
+            padding-bottom: 20px;
+            border-right: none;
+            border-bottom: 1px solid @color-grey;
+        });
+
+        .xs({
+            padding-bottom: 20px;
+            border-right: none;
+            border-bottom: 1px solid @color-grey;
+        });
+    }
+
+    .text-phone {
+        color: @color-orange-dark;
+        font-weight: bold;
+        .size(font-size, 25px, 4px);
+
+        .sm({
+            font-size: 18px !important;
+        });
+
+        .xs({
+            font-size: 20px !important;
+        });
+    }
+
+    .text-link {
+        font-weight: bold;
+        .size(font-size, 22px, 3px);
+
+        .sm({
+            font-size: 18px !important;
+        });
+
+        .xs({
+            font-size: 20px !important;
+        });
+    }
+
+    .contact {
+        margin-bottom: 30px;
+        .xs({
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        });
+
+        img {
+            transition: all 0.3s ease;
+            border: 3px solid @color-grey;
+            border-radius: 100px;
+            height: auto;
+            background: @color-blue;
+            .size(width, 95px, 12px);
+
+            .sm({
+                width: 80px !important;
+            });
+
+            .xs({
+                width: 75px !important;
+            });
+        }
+
+        &:hover {
+            img {
+                transition: all 0.3s ease;
+                //        background: darken(@color-blue, 5%);
+                border-color: @color-red;
+            }
+        }
+    }
+}

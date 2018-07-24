@@ -1,0 +1,1 @@
+<? $this->generatePartial("prefooters/prefooter"); ?>

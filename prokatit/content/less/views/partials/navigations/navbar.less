@@ -1,0 +1,124 @@
+@import "helpers/navbarCart";
+//@import "helpers/navbarAuth";
+@import "helpers/navbarStart";
+
+
+
+@brand-padding: 0;
+@menu-padding: 15px;
+
+@menu-height: @brand-height - (@menu-padding * 2);
+@menu-height-ratio: @brand-height-ratio;
+
+@navbar-mobile-button-width: 65px;
+@navbar-mobile-button-margin: ((@brand-height - @brand-height-ratio) - 32px) / 2; /* 32px - mobile button size, block means - center mobile button x 3 - xs ratio*/
+
+
+#navbar {
+  nav {
+    min-width: @min-width;
+    background-color: white;
+    box-shadow: 0px 5px 11px 0px rgba(50,50,50,0.08);
+  }
+
+  .dropdown-menu {
+    top: 90%;
+    &:before {
+      position: absolute;
+      top: -12px;
+      right: 40px;
+      display: inline-block;
+      border-right: 12px solid transparent;
+      border-bottom: 12px solid #ccc;
+      border-left: 12px solid transparent;
+      border-bottom-color: rgba(0, 0, 0, 0.2);
+      content: '';
+    }
+
+    &:after {
+      position: absolute;
+      top: -11px;
+      right: 41px;
+      display: inline-block;
+      border-right: 11px solid transparent;
+      border-bottom: 11px solid #ffffff;
+      border-left: 11px solid transparent;
+      content: '';
+    }
+
+  }
+
+  .navbarMenu {
+    .lg({
+      margin-left: 50px;
+    });
+    .xs({
+    	padding-left: 10px;
+    });
+  }
+
+  .navbar-brand>img {
+    height: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: auto;
+    .xs({
+    	margin-left: 0;
+    	margin-right: 15px;
+    });
+  }
+
+  .navbar-brand {
+    .size(height, @brand-height, @brand-height-ratio);
+    .xs({
+      height: @brand-height-xs !important;
+    });
+    padding: @brand-padding;
+  }
+
+  .nav .open > a {
+    background-color: transparent;
+    border-color: none;
+  }
+  .nav > li > a {
+  	.size(font-size, 15px, 1px);
+    padding-top: @menu-padding;
+    padding-bottom: @menu-padding;
+    .size(padding-right, @menu-padding, 3px);
+    //.size(padding-left, @menu-padding, 3px);
+    .size(line-height, @menu-height, @menu-height-ratio);
+    .xs({
+      line-height: 20px !important;
+      font-size: 14px !important;
+    });
+    
+    color: @color-black;
+    &:hover, &:focus {
+      color: @color-orange-dark;
+      background-color: transparent;
+    }
+  }
+ 
+  
+
+  .navbar-toggle {
+    margin: @navbar-mobile-button-margin 0;
+    margin-left: 15px;
+    //width: @navbar-mobile-button-width;
+    border: 0;
+   
+
+    .icon-bar {
+    	width: 24px;
+    	background-color: grey;
+    }
+    
+    &:hover {
+    	.icon-bar {
+        	background-color: @color-orange-dark;
+      	}
+    }
+    
+  }
+}
+

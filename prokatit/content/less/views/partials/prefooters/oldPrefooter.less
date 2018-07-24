@@ -1,0 +1,47 @@
+#prokatit-prefooter {
+  background-color: lighten(@footer-color, 5%);
+  color: white;
+  .size(padding-top, 20px, 4px);
+  .size(padding-bottom, 25px, 4px);
+
+  p {
+    .size(font-size, 16px, 2px);
+  }
+
+  a {
+    color: white;
+    cursor: pointer;
+  }
+
+  .icon {
+    text-align: right;
+    .xs({
+      text-align: center;
+      margin-bottom: 5px;
+    });
+  }
+
+  .glyphicon{
+    .size(font-size, 35px, 5px);
+    color: @color-red;
+  }
+
+  h5 {
+    margin-top: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .links p {
+    .size(margin, 15px, 3px);
+  }
+
+  .contact-block {
+    .size(margin-top, 20px, 4px);
+    .xs({
+      text-align: center !important;
+    });
+  }
+//  .size(height, 200px, 20px);
+//  width: 100%;
+}

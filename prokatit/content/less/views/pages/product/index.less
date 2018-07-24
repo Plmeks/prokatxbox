@@ -1,0 +1,114 @@
+#product {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .sm({ margin: 0px; });
+    .xs({ margin: 0px; });
+
+    ol, ul {
+        overflow: hidden;
+    }
+
+//    h1 {
+//      font-weight: bold;
+//    }
+
+    .description {
+        p {
+            word-wrap: break-word;
+        }
+    }
+
+    .productImage {
+        .xs({ margin-bottom: 30px; });
+        width: 100%;
+        max-height: 350px;
+        object-fit: contain;
+    }
+
+    .productWrapper, .cartWrapper {
+        .lg({ margin: 0; });
+        .md({ margin: 0; });
+    }
+
+    .productWrapper {
+        border: 1px solid #e5e5e5;
+        background-color: white;
+//        .xs({ margin-bottom: 0; padding: 10px; });
+        padding-top: 30px;
+        padding-bottom: 30px;
+        .lg({
+            padding-left: 30px;
+            padding-right: 30px;
+        });
+//        .sm({
+//            padding: 30px 10px !important;
+//        });
+//        .xs({
+//            padding: 10px !important;
+//        });
+
+        //        h2 {
+        //            margin-top: 0;
+        //            margin-bottom: 30px;
+        //        }
+    }
+
+    .cartWrapper {
+        background-color: white;
+
+        border: 1px solid #e5e5e5;
+        .totalText {
+            h2 {
+                margin-bottom: 20px;
+                .xs({
+                	margin-top: 10px !important;
+                	font-size: 24px !important;
+                	// font-weight: bold;
+                });
+            }
+
+            h4 {
+                margin-top: 16px;
+                margin-bottom: 5px;
+                .xs({
+                	font-size: 18px !important;
+                });
+            }
+        }
+        
+        .buttons {
+        	.btn {
+        		display: block;
+	            width: 100%;
+	            padding: 10px 0;
+	            .sm({
+	            	padding: 10px 0;
+	            	font-size: 16px !important;
+	            	margin-bottom: 20px !important;
+	            });
+	            
+	            .xs({
+	            	padding: 10px 0;
+	            	font-weight: bold;
+	            	font-size: 14px !important;
+	            	margin-bottom: 0px !important;
+	            });
+        	}
+        	
+        	.cartBtn {
+	            margin-bottom: 5px !important;
+	        }
+	        
+	        .catalogueBtn {
+	        	margin-bottom: 20px !important;
+	        	background-color: darken(@color-orange-dark, 2%);
+	        	color: white;
+	        	&:hover {
+	        		background-color: darken(@color-orange-dark, 4%);
+	        	}
+	        }
+        }
+        
+    }
+
+}

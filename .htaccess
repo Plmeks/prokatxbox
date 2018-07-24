@@ -1,0 +1,16 @@
+RewriteEngine On
+RewriteRule /(.*)\.php /$1 [PT]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php [L]
+
+Options -Indexes
+
+# REDIRECT FAVICONZ
+<ifmodule mod_rewrite.c>
+ RewriteCond %{THE_REQUEST} favicon.ico [NC]
+ RewriteRule (.*) http://example.com/favicon.ico [R=301,L]
+</ifmodule>
+
+php_value default_charset utf-8
+AddType 'text/html; charset=utf-8' .html .htm .shtml

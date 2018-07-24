@@ -1,0 +1,51 @@
+#content-cities {
+    .item {
+        display: none;
+    }
+
+  .selected {
+    border-color: @color-orange-light;
+    background-color: @color-orange-dark;
+    font-weight: bold;
+  }
+
+  .marker {
+    .size(width, 150px, 10px);
+    height: auto;
+    margin-bottom: 0;
+  }
+
+    .show {
+        display: block;
+    }
+
+    #city-map {
+        width: 100%;
+        height: 400px;
+    }
+
+    .content {
+        .size(margin-top, 30px, 7px);
+        .size(margin-bottom, 30px, 7px);
+        h4 {
+          .xs({
+            font-size: 18px;
+          });
+          text-align: center;
+          .sm({
+            text-align: left;
+          });
+          .xs({
+            text-align: left;
+          });
+
+          margin-bottom: 20px;
+        }
+    }
+
+  .btn {
+//      font-weight: bold;
+      min-width: 80px;
+      margin-bottom: 5px;
+  }
+}

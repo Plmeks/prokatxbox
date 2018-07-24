@@ -1,0 +1,147 @@
+@color-orange-light: #FCC602;
+@color-orange-dark: #F6A10A;
+@color-red: @color-orange-dark;
+@color-black: #201B21;
+@color-grey-dark: #5A5A5A;
+@color-white: #f2f3f4;
+@color-blue: #069C83;
+@color-blue-dark: #217567;
+@color-green: #0069C8;
+@color-grey: #e5e5e5;
+
+@body-color: #f2f3f4;
+@body-text-color: #494949;
+
+@a-color: #333;
+@a-hover-color: darken(@a-color, 20%);
+
+@min-width: 300px;
+
+@brand-height: 90px;
+@brand-height-xs: 80px;
+
+@brand-height-ratio: 5px;
+
+@import "buttons.less";
+@import "modals.less";
+
+//html, body {
+//    height: 100%;
+//}
+
+body {
+//    .size(padding-top, @brand-height, 15px); // with navbar-fixed-top. padding - for bootstrap datepicker offset bug
+    .sans-serif-font();
+    background-color: @color-grey;
+    min-width: @min-width;
+
+    //  padding-top: @brand-height;
+
+    .highlight {
+        background: linear-gradient(to bottom, lighten(@color-blue, 10%), darken(@color-blue, 10%)) !important;
+    }
+
+    input, .btn, select, textarea {
+        border-radius: 0px !important;
+    }
+
+    .modal-open {
+        overflow: auto;
+    }
+
+    .deleteIcon {
+        color: @color-red;
+        &:hover {
+            color: @color-orange-light;
+        }
+        cursor: pointer;
+    }
+
+    .dropdown-menu {
+        border-radius: 0px;
+    }
+
+    .articleTypographyLarge, .articleTypographySmall {
+        ul {
+            list-style-type: disc;
+        }
+    }
+
+    .articleTypographySmall {
+        .size(font-size, 15px, 1px);
+        .xs({
+            font-size: 13px !important;
+        });
+
+        p {
+            .size(font-size, 15px, 1px);
+            .xs({
+                font-size: 14px !important;
+            });
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            .size(font-size, 34px, 4px);
+            .xs({
+                font-size: @h2-size !important;
+            });
+        }
+
+    }
+
+    .articleTypographyLarge {
+      .size(font-size, 17px, 1px);
+      .xs({
+        font-size: 15px !important;
+      });
+
+      h1 {
+        margin-top: 0;
+        margin-bottom: 30px;
+        .size(font-size, @h1-size, 4.5px);
+        .xs({
+          font-size: @h1-size - @h1-size-ratio !important;
+        });
+      }
+
+      h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        .xs({
+          font-size: @h2-size !important;
+        });
+      }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            .xs({
+                font-size: @h3-size !important;
+            });
+        }
+
+        h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            .xs({
+                font-size: @h4-size !important;
+            });
+        }
+
+        h5 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            .xs({
+                font-size: @h5-size !important;
+            });
+        }
+
+      p {
+        .size(font-size, 17px, 1px);
+        .xs({
+          font-size: 15px !important;
+        });
+      }
+    }
+}

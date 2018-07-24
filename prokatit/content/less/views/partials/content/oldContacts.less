@@ -1,0 +1,36 @@
+#prokatit-contacts {
+
+  .contact-text {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+
+
+    .size(padding-left, 30px, 5px);
+    .size(font-size, 25px, 4px);
+
+    .xs({
+      width: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding-left: 0 !important;
+      text-align: center;
+    });
+
+    text-align: left;
+  }
+
+  .contact {
+    .size(margin-bottom, 30px, 3px)
+  }
+
+  img {
+    background: rgba(37,127,140,0.43);
+    height: auto;
+    .size(width, 95px, 12px);
+    &:hover {
+      transition: all 0.5s ease;
+      background: @color-blue;
+    }
+  }
+}

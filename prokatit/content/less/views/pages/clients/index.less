@@ -1,0 +1,37 @@
+#clients {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .sm({ margin: 0px; });
+    .xs({ margin: 0px; });
+
+    .articleWrapper, .treeWrapper {
+        .lg({ margin: 0; });
+        .md({ margin: 0; });
+    }
+
+    .articleWrapper {
+      border: 1px solid #e5e5e5;
+      background-color: white;
+      .xs({ margin-bottom: 0; padding: 10px; });
+      padding: 30px;
+    }
+
+    .description {
+      p {
+        word-wrap: break-word;
+      }
+    }
+
+    #clientsTree {
+        .list-group {
+            margin-bottom: 0;
+            .node-selected {
+                background-color: @color-blue !important;
+                color: white;
+            }
+            li {
+                border-radius: 0;
+            }
+        }
+    }
+}

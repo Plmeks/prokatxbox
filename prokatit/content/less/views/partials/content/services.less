@@ -1,0 +1,74 @@
+@showing-incative-color: @color-red;
+@showing-active-color: rgba(44, 47, 60, 0.9);
+@showing-text-color: #fff;
+
+@showing-image-middle-ratio: 30px;
+@showing-image-middle: 350px;
+
+@wrap-height: 45px;
+@show-time: 600ms;
+
+@showing-padding: 15px;
+#prokatit-services {
+  .divider {
+    height: 30px;
+  }
+  .showing-image {
+    .size(height, @showing-image-middle, @showing-image-middle-ratio);
+    padding-bottom: @wrap-height;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .description {
+    max-height: 200px;
+  }
+
+  .showing-box {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .showing-box:hover .showing-wrap {
+    height: 100%;
+    transition: @show-time;
+    background: @showing-active-color;
+  }
+  .showing-box .showing-wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: @showing-incative-color;
+    transition: @show-time;
+    height: @wrap-height;
+    color: @showing-text-color;
+    box-sizing: border-box;
+    text-align: left;
+    padding-left: @showing-padding;
+    padding-right: @showing-padding;
+  }
+
+  .showing-box .showing-wrap h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .showing-box .showing-wrap .showing-complect {
+    color: @color-red;
+  }
+
+  .showing-box .showing-wrap ul {
+    list-style-type: none;
+  }
+
+  .showing-box .showing-wrap ul .glyphicon {
+    color: #80B12F
+  }
+
+}
+
+

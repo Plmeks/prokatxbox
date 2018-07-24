@@ -1,0 +1,9 @@
+@import "../partials/navigations/navbar.less";
+@import "../partials/footers/stickyFooter.less";
+
+body {
+    .size(padding-top, @brand-height, @brand-height-ratio); // with navbar-fixed-top. padding - for bootstrap datepicker offset bug
+    .xs({
+        padding-top: @brand-height-xs + 5px !important;
+    });
+}
